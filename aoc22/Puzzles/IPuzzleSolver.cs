@@ -15,6 +15,13 @@
     /// </summary>
     /// <param name="input">Input parameters of the puzzle.</param>
     /// <returns>Puzzle solution for the given input.</returns>
-    string Compute(string input);
+    string SolvePart1(string input);
+
+    /// <summary>
+    /// Performs the puzzle's required computation on the given input and returns the result.
+    /// </summary>
+    /// <param name="input">Input parameters of the puzzle.</param>
+    /// <returns>Puzzle solution for the given input.</returns>
+    string SolvePart2(string input);
   }
 }

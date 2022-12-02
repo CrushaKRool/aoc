@@ -9,16 +9,7 @@ namespace aoc22.Puzzles
   {
     public string PuzzleName => "Day 1: Calorie Counting";
 
-    public string Compute(string input)
-    {
-      return Part1(input) + Environment.NewLine + Part2(input);
-    }
-
-    /// <summary>
-    /// How many calories is the elf with the most calories carrying?
-    /// </summary>
-    /// <param name="input">One numeric calorie per line, or a blank line to indicate the end of the current elf's load.</param>
-    private static string Part1(string input)
+    public string SolvePart1(string input)
     {
       List<long> calorieSums = GetCalorieSums(input);
 
@@ -28,11 +19,7 @@ namespace aoc22.Puzzles
       return $"The Elf carrying the most is the {elfIndex + 1}th Elf with {maxCalories} Calories.";
     }
 
-    /// <summary>
-    /// How many total calories are the three elves with the most calories carrying?
-    /// </summary>
-    /// <param name="input">One numeric calorie per line, or a blank line to indicate the end of the current elf's load.</param>
-    private static string Part2(string input)
+    public string SolvePart2(string input)
     {
       List<long> calorieSums = GetCalorieSums(input);
 

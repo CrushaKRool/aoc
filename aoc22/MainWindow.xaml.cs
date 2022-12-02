@@ -29,14 +29,22 @@ namespace aoc22
     private void btnSolve_Click(object sender, RoutedEventArgs e)
     {
       // TODO: Make the puzzle selectable.
-      IPuzzleSolver solver = new Day1();
+      IPuzzleSolver solver = new Day2();
       try
       {
-        SetOutput(solver.Compute(GetInput()));
+        SetOutput1(solver.SolvePart1(GetInput()));
       }
       catch (Exception ex)
       {
-        SetOutput($"ERROR: {ex.Message}");
+        SetOutput1($"ERROR: {ex.Message}");
+      }
+      try
+      {
+        SetOutput2(solver.SolvePart2(GetInput()));
+      }
+      catch (Exception ex)
+      {
+        SetOutput2($"ERROR: {ex.Message}");
       }
     }
 
@@ -53,9 +61,18 @@ namespace aoc22
     /// Shows the computed output of the puzzle in the UI.
     /// </summary>
     /// <param name="output">Output to show.</param>
-    private void SetOutput(string output)
+    private void SetOutput1(string output)
     {
       tbOutput.Text = output;
+    }
+
+    /// <summary>
+    /// Shows the computed output of the puzzle in the UI.
+    /// </summary>
+    /// <param name="output">Output to show.</param>
+    private void SetOutput2(string output)
+    {
+      tbOutput2.Text = output;
     }
   }
 }

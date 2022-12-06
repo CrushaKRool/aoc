@@ -29,7 +29,7 @@ namespace aoc22
     private void btnSolve_Click(object sender, RoutedEventArgs e)
     {
       // TODO: Make the puzzle selectable.
-      IPuzzleSolver solver = new Day5();
+      IPuzzleSolver solver = new Day6();
       try
       {
         SetOutput1(solver.SolvePart1(GetInput()));

@@ -32,12 +32,12 @@
         </Grid.ColumnDefinitions>
         
         <Label Content="Input" Margin="10,0" VerticalAlignment="Top" />
-        <TextBox x:Name="tbInput" Margin="10,0,10,10" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.RowSpan="2" AcceptsReturn="True" AcceptsTab="True" />
+        <TextBox x:Name="tbInput" Margin="10,0,10,10" FontFamily="Consolas" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.RowSpan="2" AcceptsReturn="True" AcceptsTab="True" />
         
         <Button x:Name="btnSolve" Content="Solve" Margin="10" Width="100" Height="60" Grid.Row="1" Grid.Column="1" FontSize="20" Click="btnSolve_Click" />
         
         <Label Content="Output" Margin="10,0" VerticalAlignment="Top" Grid.Column="2" />
-        <TextBox x:Name="tbOutput" Margin="10,0,10,10" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.Column="2" AcceptsReturn="True" AcceptsTab="True" IsReadOnly="True" />
-        <TextBox x:Name="tbOutput2" Margin="10,0,10,10" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Row="2" Grid.Column="2" AcceptsReturn="True" AcceptsTab="True" IsReadOnly="True" />
+        <TextBox x:Name="tbOutput" Margin="10,0,10,10" FontFamily="Consolas" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.Column="2" AcceptsReturn="True" AcceptsTab="True" IsReadOnly="True" />
+        <TextBox x:Name="tbOutput2" Margin="10,0,10,10" FontFamily="Consolas" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Row="2" Grid.Column="2" AcceptsReturn="True" AcceptsTab="True" IsReadOnly="True" />
     </Grid>
 </Window>

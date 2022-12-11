@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -9,12 +9,20 @@
 
   <ItemGroup>
     <None Remove="Puzzles\Day01\Day01Input.txt" />
+    <None Remove="Puzzles\Day02\Day02Input.txt" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Puzzles\Day01\Day01Input.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Puzzles\Day02\Day02Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\aoc_common\aoc_common.csproj" />
   </ItemGroup>
 
 </Project>

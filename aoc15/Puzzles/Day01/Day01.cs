@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using aoc_common;
 
 namespace aoc15.Puzzles.Day01
 {
   public class Day01 : IPuzzle
   {
-    public string GetInputFileName()
-    {
-      return @"Puzzles\Day01\Day01Input.txt";
-    }
+    public string InputFileName => @"Puzzles\Day01\Day01Input.txt";
+
+    public string PuzzleName => "Day 1: Not Quite Lisp";
 
     public void Run(string input)
     {

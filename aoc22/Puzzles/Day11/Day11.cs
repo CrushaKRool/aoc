@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Numerics;
 using System.Text.RegularExpressions;
 
-namespace aoc22.Puzzles
+namespace aoc22.Puzzles.Day11
 {
-  class Day11 : IPuzzleSolver
+  internal class Day11 : IPuzzleSolver
   {
     private const int LinesPerMonkey = 7;
 
@@ -16,7 +15,7 @@ namespace aoc22.Puzzles
     {
       IDictionary<int, Monkey> monkeys = new SortedDictionary<int, Monkey>();
       List<string> inputLines = input.Split(Environment.NewLine).ToList();
-      for (int i = 0; i <= inputLines.Count - LinesPerMonkey; i+= LinesPerMonkey)
+      for (int i = 0; i <= inputLines.Count - LinesPerMonkey; i += LinesPerMonkey)
       {
         List<string> subList = inputLines.GetRange(i, LinesPerMonkey);
         Monkey monkey = new(subList);
@@ -75,7 +74,7 @@ namespace aoc22.Puzzles
       return $"The level of monkey business after 10000 rounds without reducing worry is {monkeyBusiness}.";
     }
 
-    class Monkey
+    private class Monkey
     {
       public int ID { get; set; }
       public Queue<Item> Items { get; set; }
@@ -133,11 +132,11 @@ namespace aoc22.Puzzles
 
       protected virtual void ReduceWorry(Item item)
       {
-        item.WorryLevel = (long)(Math.Floor(item.WorryLevel / (double)WorryOperand));
+        item.WorryLevel = (long)Math.Floor(item.WorryLevel / (double)WorryOperand);
       }
     }
 
-    class MonkeyPart2 : Monkey
+    private class MonkeyPart2 : Monkey
     {
       public MonkeyPart2(List<string> inputLines) : base(inputLines)
       {
@@ -149,12 +148,12 @@ namespace aoc22.Puzzles
       }
     }
 
-    class Item
+    private class Item
     {
       public long WorryLevel { get; set; }
     }
 
-    class Operation
+    private class Operation
     {
       public string Operator { get; }
       public string Operand { get; }
@@ -181,6 +180,7 @@ namespace aoc22.Puzzles
           case "+":
             item.WorryLevel += numOperand;
             break;
+
           case "*":
             item.WorryLevel *= numOperand;
             break;

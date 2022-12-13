@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace aoc22.Puzzles
+namespace aoc22.Puzzles.Day07
 {
   /// <summary>
   /// Not my best work... this is quite some spaghetti.
   /// </summary>
-  class Day7 : IPuzzleSolver
+  internal class Day07 : IPuzzleSolver
   {
     private readonly Regex CommandParser = new("\\$ (\\S+)(.*?)$");
     private readonly Regex DirectoryParser = new("dir (\\S+)");
@@ -81,11 +81,12 @@ namespace aoc22.Puzzles
         throw new ArgumentException("OnCommand called without a command input!");
       }
 
-      switch(m.Groups[1].Value)
+      switch (m.Groups[1].Value)
       {
         case "cd":
           CommandCD(m.Groups[2].Value.Trim());
           break;
+
         case "ls":
           CommandLS();
           break;

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Numerics;
 using System.Text.RegularExpressions;
 
-namespace aoc22.Puzzles
+namespace aoc22.Puzzles.Day09
 {
-  class Day9 : IPuzzleSolver
+  internal class Day09 : IPuzzleSolver
   {
     private readonly Regex CommandParser = new("(\\w) (\\d+)");
 
@@ -50,15 +50,19 @@ namespace aoc22.Puzzles
             case "U":
               state.MoveHeadUp();
               break;
+
             case "D":
               state.MoveHeadDown();
               break;
+
             case "L":
               state.MoveHeadLeft();
               break;
+
             case "R":
               state.MoveHeadRight();
               break;
+
             default:
               throw new ArgumentException($"Invalid move direction: {moveDir}");
           }
@@ -67,12 +71,13 @@ namespace aoc22.Puzzles
     }
   }
 
-  class RopeBridgeState
+  internal class RopeBridgeState
   {
     private List<Vector2> RopeSegments { get; } = new();
 
     // Convenience accessors.
     private Vector2 Head { get => RopeSegments[0]; set => RopeSegments[0] = value; }
+
     private Vector2 Tail { get => RopeSegments[RopeSegments.Count - 1]; set => RopeSegments[RopeSegments.Count - 1] = value; }
 
     /// <summary>

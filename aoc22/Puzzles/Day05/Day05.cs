@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace aoc22.Puzzles
+namespace aoc22.Puzzles.Day05
 {
-  class Day5 : IPuzzleSolver
+  internal class Day05 : IPuzzleSolver
   {
     private readonly Regex CommandParser = new("move (\\d+) from (\\d+) to (\\d+)");
 
@@ -91,7 +91,7 @@ namespace aoc22.Puzzles
       IList<Stack<char>> stacks = new List<Stack<char>>();
       string indexLine = stackLines.Last();
       // For each stack index in the last line...
-      for(int x = 0; x < indexLine.Length; x++)
+      for (int x = 0; x < indexLine.Length; x++)
       {
         if (char.IsWhiteSpace(indexLine[x]))
         {
@@ -121,7 +121,7 @@ namespace aoc22.Puzzles
       {
         int numCratesToMove = int.Parse(match.Groups[1].Value);
         // Stack indices are 0-based internally and 1-based in the input.
-        int stackSourceIndex = int.Parse(match.Groups[2].Value) - 1; 
+        int stackSourceIndex = int.Parse(match.Groups[2].Value) - 1;
         int stackTargetIndex = int.Parse(match.Groups[3].Value) - 1;
         for (int i = 0; i < numCratesToMove; i++)
         {

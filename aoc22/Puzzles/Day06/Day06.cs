@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace aoc22.Puzzles
+namespace aoc22.Puzzles.Day06
 {
-  class Day6 : IPuzzleSolver
+  internal class Day06 : IPuzzleSolver
   {
     public string PuzzleName => "Day 6: Tuning Trouble";
 

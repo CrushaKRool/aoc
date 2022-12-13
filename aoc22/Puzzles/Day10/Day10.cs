@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace aoc22.Puzzles
+namespace aoc22.Puzzles.Day10
 {
-  class Day10 : IPuzzleSolver
+  internal class Day10 : IPuzzleSolver
   {
     public string PuzzleName => "Day 10: Cathode-Ray Tube";
 
@@ -34,7 +34,7 @@ namespace aoc22.Puzzles
       SimpleCpu cpu = new(instructionQueue);
       while (!cpu.FinishedAllInstructions)
       {
-        if (Math.Abs(cpu.X - ((cpu.Cycle-1) % 40)) < 2)
+        if (Math.Abs(cpu.X - (cpu.Cycle - 1) % 40) < 2)
         {
           sb.Append('#');
         }
@@ -42,7 +42,7 @@ namespace aoc22.Puzzles
         {
           sb.Append('.');
         }
-        if ((cpu.Cycle) % 40 == 0)
+        if (cpu.Cycle % 40 == 0)
         {
           sb.AppendLine();
         }
@@ -52,7 +52,7 @@ namespace aoc22.Puzzles
       return sb.ToString();
     }
 
-    class SimpleCpu
+    private class SimpleCpu
     {
       public int Cycle { get; set; } = 1;
       public int X { get; set; } = 1;
@@ -95,6 +95,7 @@ namespace aoc22.Puzzles
         {
           case "noop":
             return true;
+
           case "addx":
             if (Cycle - CurInstructionCycleStart >= 1)
             {
@@ -102,6 +103,7 @@ namespace aoc22.Puzzles
               return true;
             }
             return false;
+
           default:
             throw new ArgumentException($"Unknown instruction: {instruction}");
         }

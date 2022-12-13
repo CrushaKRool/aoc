@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace aoc22.Puzzles
+namespace aoc22.Puzzles.Day03
 {
-  class Day3 : IPuzzleSolver
+  internal class Day03 : IPuzzleSolver
   {
     public string PuzzleName => "Day 3: Rucksack Reorganization";
 

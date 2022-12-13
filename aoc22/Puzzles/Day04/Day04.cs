@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace aoc22.Puzzles
+namespace aoc22.Puzzles.Day04
 {
-  class Day4 : IPuzzleSolver
+  internal class Day04 : IPuzzleSolver
   {
     private readonly Regex rangePairParser = new("(\\d+)-(\\d+),(\\d+)-(\\d+)");
 
@@ -101,7 +101,7 @@ namespace aoc22.Puzzles
       /// <returns>true, if this range overlaps the other.</returns>
       public bool OverlapsOther(Range other)
       {
-        return (Min <= other.Min && Max >= other.Min) || (Min <= other.Max && Max >= other.Max);
+        return Min <= other.Min && Max >= other.Min || Min <= other.Max && Max >= other.Max;
       }
     }
   }

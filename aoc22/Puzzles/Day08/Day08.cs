@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace aoc22.Puzzles
+namespace aoc22.Puzzles.Day08
 {
-  class Day8 : IPuzzleSolver
+  internal class Day08 : IPuzzleSolver
   {
     private const int UninitalizedTreeHeight = -1;
 
@@ -22,10 +19,10 @@ namespace aoc22.Puzzles
       sizeX = treeGrid.Length;
       sizeY = treeGrid[0].Length;
 
-      bool[,] visibleGrid = new bool[sizeX,sizeY];
+      bool[,] visibleGrid = new bool[sizeX, sizeY];
 
       // Check all trees from the top.
-      for(int x = 0; x < sizeX; x++)
+      for (int x = 0; x < sizeX; x++)
       {
         int highestTree = UninitalizedTreeHeight;
         for (int y = 0; y < sizeY; y++)
@@ -69,7 +66,7 @@ namespace aoc22.Puzzles
       {
         for (int y = 0; y < sizeY; y++)
         {
-          if (visibleGrid[x,y])
+          if (visibleGrid[x, y])
           {
             visibleTreeCount++;
           }

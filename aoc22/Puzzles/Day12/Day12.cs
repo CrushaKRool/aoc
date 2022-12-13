@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using static aoc22.Puzzles.Day7;
 
-namespace aoc22.Puzzles
+namespace aoc22.Puzzles.Day12
 {
   internal class Day12 : IPuzzleSolver
   {
@@ -17,7 +12,7 @@ namespace aoc22.Puzzles
     {
       Dijkstra dijkstra = new(input);
       List<Node> path = dijkstra.CalculateShortestDistance(dijkstra.GetAllNodesWithElevation('S').First());
-      
+
       return $"The smallest distance from the start is: {path.Last().DistanceFromStart}.";
     }
 

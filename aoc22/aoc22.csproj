@@ -1,10 +1,29 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <UseWPF>true</UseWPF>
+    <UseWPF>False</UseWPF>
+    <StartupObject></StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Puzzles\Day13\Day13Input.txt" />
+    <None Remove="Puzzles\Day13\Day13Test.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Puzzles\Day13\Day13Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day13\Day13Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\aoc_common\aoc_common.csproj" />
+  </ItemGroup>
 
 </Project>

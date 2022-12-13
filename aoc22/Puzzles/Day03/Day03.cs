@@ -1,14 +1,17 @@
-﻿using System;
+﻿using aoc_common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace aoc22.Puzzles.Day03
 {
-  internal class Day03 : IPuzzleSolver
+  internal class Day03 : IPuzzle
   {
     public string PuzzleName => "Day 3: Rucksack Reorganization";
 
-    public string SolvePart1(string input)
+    public string InputFileName => @"Puzzles\Day03\Day03Input.txt";
+
+    public void Run(string input)
     {
       int numRucksacks = 0;
       int prioritySum = 0;
@@ -31,15 +34,14 @@ namespace aoc22.Puzzles.Day03
         numRucksacks++;
       }
 
-      return $"The total sum of item priorities that appear in both compartments of the {numRucksacks} rucksacks is {prioritySum}.";
-    }
+      Console.WriteLine($"The total sum of item priorities that appear in both compartments of the {numRucksacks} rucksacks is {prioritySum}.");
 
-    public string SolvePart2(string input)
-    {
+      // Part 2
+
       const int stepSize = 3;
 
       int numGroups = 0;
-      int prioritySum = 0;
+      prioritySum = 0;
       string[] lines = input.Split(Environment.NewLine).Where(l => !string.IsNullOrWhiteSpace(l)).ToArray();
       for (int i = 0; i < lines.Length; i += stepSize)
       {
@@ -53,7 +55,7 @@ namespace aoc22.Puzzles.Day03
         numGroups++;
       }
 
-      return $"The total sum of group badge priorities of the {numGroups} groups is {prioritySum}.";
+      Console.WriteLine($"The total sum of group badge priorities of the {numGroups} groups is {prioritySum}.");
     }
 
     /// <summary>

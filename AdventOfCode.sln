@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aoc22", "aoc22\aoc22.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aoc15", "aoc15\aoc15.csproj", "{F7C6AF0A-0809-40ED-BB18-9E37892DBF80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aoc_common", "aoc_common\aoc_common.csproj", "{C7F73450-1020-4D7C-929D-BA0FB6EE9412}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aoc_common", "aoc_common\aoc_common.csproj", "{C7F73450-1020-4D7C-929D-BA0FB6EE9412}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

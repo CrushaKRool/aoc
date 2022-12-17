@@ -8,6 +8,15 @@
     <StartupObject></StartupObject>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants);TRACE</DefineConstants>
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants);TRACE</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="Puzzles\Day01\Day01Input.txt" />
     <None Remove="Puzzles\Day02\Day02Input.txt" />
@@ -20,6 +29,8 @@
     <None Remove="Puzzles\Day15\Day15Test.txt" />
     <None Remove="Puzzles\Day16\Day16Input.txt" />
     <None Remove="Puzzles\Day16\Day16Test.txt" />
+    <None Remove="Puzzles\Day17\Day17Input.txt" />
+    <None Remove="Puzzles\Day17\Day17Test.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -54,6 +65,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Puzzles\Day16\Day16Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day17\Day17Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day17\Day17Test.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

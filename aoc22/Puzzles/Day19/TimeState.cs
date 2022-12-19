@@ -130,13 +130,13 @@ namespace aoc22.Puzzles.Day19
         return new Mineral?[] { Mineral.Geode };
       }
 
-      //if (result.Contains(Mineral.Obsidian))
-      //{
-      //  // Branch pruning optimization:
-      //  // If we could build an obsidian miner, either build it or save the resources for a potential geode miner.
-      //  // We need obsidian to mine geodes and we want it as soon as possible, so don't waste it on other miners.
-      //  return new Mineral?[] { Mineral.Obsidian, null };
-      //}
+      if (result.Contains(Mineral.Obsidian))
+      {
+        // Branch pruning optimization:
+        // If we could build an obsidian miner, either build it or save the resources for a potential geode miner.
+        // We need obsidian to mine geodes and we want it as soon as possible, so don't waste it on other miners.
+        return new Mineral?[] { Mineral.Obsidian, null };
+      }
 
       return result;
     }

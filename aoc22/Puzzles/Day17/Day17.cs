@@ -31,6 +31,7 @@ namespace aoc22.Puzzles.Day17
       input = input.Trim();
 
       RunSimulation(input, 2022);
+      RunSimulation(input, 1000000000000);
     }
 
     private void RunSimulation(string input, long maxRocks)

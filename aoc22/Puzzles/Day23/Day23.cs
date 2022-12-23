@@ -33,15 +33,16 @@ namespace aoc22.Puzzles.Day23
       allElves = ReadElvesFromInput(input);
 
       int round = 0;
+      bool elfMoved;
       do
       {
-        ProcessRound(allElves, round);
+        elfMoved = ProcessRound(allElves, round);
         round++;
-      } while (allElves.Any(elf => elf.ProposedMove != null)); // Run until no elves proposed any move.
+      } while (elfMoved); // Run until no elves moved.
 
       PrintAllElves(allElves);
 
-      Console.WriteLine($"{round + 1} is the first round where no elves moved.");
+      Console.WriteLine($"{round} is the first round where no elves moved.");
     }
 
     private static List<Elf> ReadElvesFromInput(string input)
@@ -62,10 +63,21 @@ namespace aoc22.Puzzles.Day23
       return allElves;
     }
 
-    private static void ProcessRound(List<Elf> allElves, int round)
+    /// <summary>
+    /// Advances the elves a single round by letting each propose a new destination and then moving those that won't overlap at the new destination.
+    /// </summary>
+    /// <param name="allElves">Enumeration of all elves.</param>
+    /// <param name="round">The current round. This value is used to decide which direction to consider first.</param>
+    /// <returns>true, if at least one elf moved this round. false, is everyone is in an unmovable position.</returns>
+    private static bool ProcessRound(IEnumerable<Elf> allElves, int round)
     {
 #if DEBUG
       Console.WriteLine($"Starting round {round + 1}.");
+#else
+      if (round % 100 == 0)
+      {
+        Console.WriteLine($"Starting round {round + 1}.");
+      }
 #endif
 
       // Have all elves make a proposal.
@@ -76,6 +88,11 @@ namespace aoc22.Puzzles.Day23
 
 #if TRACE
       PrintAllElves(allElves);
+#else
+      if (round % 100 == 0)
+      {
+        PrintAllElves(allElves);
+      }
 #endif
 
       // Find all proposals that are not overlapping.
@@ -86,12 +103,17 @@ namespace aoc22.Puzzles.Day23
         .Select(grp => grp.Key)
         .ToHashSet();
 
+      bool elfMoved = false;
+
       // Move all elves to the proposed location that don't have an overlap.
-      foreach (Elf elf in allElves.Where(elf => distinctProposals.Contains(elf.ProposedLocation)))
+      foreach (Elf elf in allElves.Where(elf => elf.ProposedMove != null && distinctProposals.Contains(elf.ProposedLocation)))
       {
         elf.Location = elf.ProposedLocation;
         elf.ProposedMove = null;
+        elfMoved = true;
       }
+
+      return elfMoved;
     }
 
     private static Rectangle GetMinimumBoundingRectangle(IEnumerable<Elf> allElves)
@@ -123,7 +145,24 @@ namespace aoc22.Puzzles.Day23
           Point curPoint = new(x + rect.X, y + rect.Y);
           if (allElfLocations.ContainsKey(curPoint))
           {
-            Console.Write(allElfLocations[curPoint].ProposedMove?.Symbol ?? "#");
+            string? proposedMoveSymbol = allElfLocations[curPoint].ProposedMove?.Symbol;
+            if (proposedMoveSymbol == null)
+            {
+              Console.Write("#");
+            }
+            else
+            {
+              Console.ForegroundColor = proposedMoveSymbol switch
+              {
+                "N" => ConsoleColor.Red,
+                "E" => ConsoleColor.Magenta,
+                "S" => ConsoleColor.Green,
+                "W" => ConsoleColor.Blue,
+                _ => ConsoleColor.White,
+              };
+              Console.Write(proposedMoveSymbol);
+              Console.ResetColor();
+            }
           }
           else
           {

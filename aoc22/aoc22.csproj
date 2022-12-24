@@ -44,6 +44,8 @@
     <None Remove="Puzzles\Day23\Day23Input.txt" />
     <None Remove="Puzzles\Day23\Day23Test.txt" />
     <None Remove="Puzzles\Day23\Day23TestSmall.txt" />
+    <None Remove="Puzzles\Day24\Day24Input.txt" />
+    <None Remove="Puzzles\Day24\Day24Test.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -123,6 +125,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Puzzles\Day23\Day23Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day24\Day24Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day24\Day24Test.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

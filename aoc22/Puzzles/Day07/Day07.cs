@@ -1,4 +1,5 @@
-﻿using System;
+﻿using aoc_common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -8,7 +9,7 @@ namespace aoc22.Puzzles.Day07
   /// <summary>
   /// Not my best work... this is quite some spaghetti.
   /// </summary>
-  internal class Day07 : IPuzzleSolver
+  public class Day07 : IPuzzle
   {
     private readonly Regex CommandParser = new("\\$ (\\S+)(.*?)$");
     private readonly Regex DirectoryParser = new("dir (\\S+)");
@@ -22,18 +23,15 @@ namespace aoc22.Puzzles.Day07
 
     public string PuzzleName => "Day 7: No Space Left On Device";
 
-    public string SolvePart1(string input)
+    public string InputFileName => @"Input.txt";
+
+    public void Run(string input)
     {
       ParseDirectoryTree(input);
 
       long totalSize = AllDirs.Where(n => n.Size <= 100000).Sum(n => n.Size);
 
-      return $"The sum of total directory sizes is {totalSize}.";
-    }
-
-    public string SolvePart2(string input)
-    {
-      ParseDirectoryTree(input);
+      Console.WriteLine($"The sum of total directory sizes is {totalSize}.");
 
       long totalSpace = 70_000_000;
       long requiredSpace = 30_000_000;
@@ -50,7 +48,7 @@ namespace aoc22.Puzzles.Day07
       // Then sort them by ascending size. It follows that the first entry will the smallest one that satisfies our needs.
       DirectoryNode nodeToDelete = AllDirs.Where(n => n.Size >= spaceToFree).OrderBy(n => n.Size).First();
 
-      return $"We should delete directory {nodeToDelete.Name}, which has a total size of {nodeToDelete.Size}.";
+      Console.WriteLine($"We should delete directory {nodeToDelete.Name}, which has a total size of {nodeToDelete.Size}.");
     }
 
     private void ParseDirectoryTree(string input)
@@ -144,58 +142,6 @@ namespace aoc22.Puzzles.Day07
       {
         CurrentDir.Children.Add(new FileNode(m.Groups[2].Value, long.Parse(m.Groups[1].Value)));
       }
-    }
-
-    public abstract class Node
-    {
-      public string Name { get; }
-      public virtual long Size { get; }
-
-      protected Node(string name)
-      {
-        Name = name;
-      }
-
-      public override bool Equals(object? obj)
-      {
-        return obj is Node node &&
-               Name == node.Name;
-      }
-
-      public override int GetHashCode()
-      {
-        return HashCode.Combine(Name);
-      }
-
-      public override string ToString()
-      {
-        return Name;
-      }
-    }
-
-    public class DirectoryNode : Node
-    {
-      public DirectoryNode? Parent { get; }
-      public ISet<Node> Children { get; set; } = new HashSet<Node>();
-
-      public DirectoryNode(string name, DirectoryNode? parent) : base(name)
-      {
-        Parent = parent;
-      }
-
-      public override long Size => Children.Sum(n => n.Size);
-    }
-
-    public class FileNode : Node
-    {
-      private readonly long _size;
-
-      public FileNode(string name, long size) : base(name)
-      {
-        _size = size;
-      }
-
-      public override long Size => _size;
     }
   }
 }

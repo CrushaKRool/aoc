@@ -1,20 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using aoc_common;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace aoc22.Puzzles.Day06
 {
-  internal class Day06 : IPuzzleSolver
+  public class Day06 : IPuzzle
   {
     public string PuzzleName => "Day 6: Tuning Trouble";
 
-    public string SolvePart1(string input)
-    {
-      return FindStartMarker(input.Trim(), 4);
-    }
+    public string InputFileName => @"Input.txt";
 
-    public string SolvePart2(string input)
+    public void Run(string input)
     {
-      return FindStartMarker(input.Trim(), 14);
+      Console.WriteLine(FindStartMarker(input.Trim(), 4));
+      Console.WriteLine(FindStartMarker(input.Trim(), 14));
     }
 
     /// <summary>

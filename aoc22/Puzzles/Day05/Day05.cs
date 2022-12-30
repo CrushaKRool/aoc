@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace aoc22.Puzzles.Day05
 {
-  internal class Day05 : IPuzzle
+  public class Day05 : IPuzzle
   {
     private readonly Regex CommandParser = new("move (\\d+) from (\\d+) to (\\d+)");
 

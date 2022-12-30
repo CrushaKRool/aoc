@@ -1,19 +1,22 @@
-﻿using System;
+﻿using aoc_common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace aoc22.Puzzles.Day08
 {
-  internal class Day08 : IPuzzleSolver
+  internal class Day08 : IPuzzle
   {
     private const int UninitalizedTreeHeight = -1;
 
     public string PuzzleName => "Day 8: Treetop Tree House";
 
+    public string InputFileName => @"Input.txt";
+
     private int sizeX;
     private int sizeY;
 
-    public string SolvePart1(string input)
+    public void Run(string input)
     {
       int[][] treeGrid = ParseTreeGrid(input);
       sizeX = treeGrid.Length;
@@ -73,12 +76,11 @@ namespace aoc22.Puzzles.Day08
         }
       }
 
-      return $"{visibleTreeCount} trees are visible from the outside.";
-    }
+      Console.WriteLine($"{visibleTreeCount} trees are visible from the outside.");
+      
+      // Part 2
 
-    public string SolvePart2(string input)
-    {
-      int[][] treeGrid = ParseTreeGrid(input);
+      treeGrid = ParseTreeGrid(input);
       sizeX = treeGrid.Length;
       sizeY = treeGrid[0].Length;
 
@@ -95,7 +97,7 @@ namespace aoc22.Puzzles.Day08
         }
       }
 
-      return $"The best scenic score possible is {bestScenicScore}.";
+      Console.WriteLine($"The best scenic score possible is {bestScenicScore}.");
     }
 
     private int[][] ParseTreeGrid(string input)

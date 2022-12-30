@@ -3,9 +3,6 @@
 using aoc_common;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace aoc22.Puzzles.Day20
 {
@@ -13,7 +10,7 @@ namespace aoc22.Puzzles.Day20
   {
     public string PuzzleName => "Day 20: Grove Positioning System";
 
-    public string InputFileName => @"Puzzles\Day20\Day20Input.txt";
+    public string InputFileName => @"Input.txt";
 
     private const long DecryptionKey = 811589153;
 

@@ -29,10 +29,10 @@ namespace aoc_common
         }
         if (dayPuzzle == null)
         {
-          Console.WriteLine($"Unable to instantiate class 'Day{dayNumber}'.");
+          Console.WriteLine($"Unable to instantiate class 'Day{dayNumber:D2}'.");
           return;
         }
-        RunPuzzle(executingAssembly, dayPuzzle);
+        RunPuzzle(executingAssembly, dayPuzzle, dayNumber);
       }
       else
       {
@@ -45,14 +45,20 @@ namespace aoc_common
     /// </summary>
     /// <param name="executingAssembly">The assembly of the Advent of Code event.</param>
     /// <param name="puzzle">The puzzle to run.</param>
-    private static void RunPuzzle(Assembly executingAssembly, IPuzzle puzzle)
+    /// <param name="dayNumber">Day number of the puzzle to run.</param>
+    private static void RunPuzzle(Assembly executingAssembly, IPuzzle puzzle, int dayNumber)
     {
       Console.WriteLine();
       Console.WriteLine(puzzle.PuzzleName);
       Console.WriteLine(new string('-', puzzle.PuzzleName.Length));
 
-      string path = Path.Combine(Path.GetDirectoryName(executingAssembly.Location), puzzle.InputFileName);
-      string input = File.Exists(path) ? File.ReadAllText(path) : "";
+      string path = Path.Combine(Path.GetDirectoryName(executingAssembly.Location) ?? "",
+          "Puzzles", $"Day{dayNumber:D2}", "Data", puzzle.InputFileName);
+      if (!File.Exists(path))
+      {
+        path = Path.Combine(Path.GetDirectoryName(executingAssembly.Location) ?? "", puzzle.InputFileName);
+      }
+      string input = File.ReadAllText(path);
       puzzle.Run(input);
     }
   }

@@ -9,7 +9,7 @@ namespace aoc22.Puzzles.Day19
   {
     public string PuzzleName => "Day 19: Not Enough Minerals";
 
-    public string InputFileName => @"Puzzles\Day19\Day19Input.txt";
+    public string InputFileName => @"Input.txt";
 
     public void Run(string input)
     {

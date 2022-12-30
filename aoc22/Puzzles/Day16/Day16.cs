@@ -10,7 +10,7 @@ namespace aoc22.Puzzles.Day16
   {
     public string PuzzleName => "Day 16: Proboscidea Volcanium";
 
-    public string InputFileName => @"Puzzles\Day16\Day16Input.txt";
+    public string InputFileName => @"Input.txt";
 
     public void Run(string input)
     {

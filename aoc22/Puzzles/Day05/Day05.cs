@@ -1,4 +1,5 @@
-﻿using System;
+﻿using aoc_common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,13 +7,15 @@ using System.Text.RegularExpressions;
 
 namespace aoc22.Puzzles.Day05
 {
-  internal class Day05 : IPuzzleSolver
+  internal class Day05 : IPuzzle
   {
     private readonly Regex CommandParser = new("move (\\d+) from (\\d+) to (\\d+)");
 
     public string PuzzleName => "Day 5: Supply Stacks";
 
-    public string SolvePart1(string input)
+    public string InputFileName => @"Input.txt";
+
+    public void Run(string input)
     {
       List<string> initialStackLines = new();
       IList<Stack<char>> stacks = null;
@@ -46,13 +49,12 @@ namespace aoc22.Puzzles.Day05
       {
         sb.Append(stack.Peek());
       }
-      return $"The top crates on all stacks in order are: {sb}";
-    }
+      Console.WriteLine($"The top crates on all stacks in order are: {sb}");
 
-    public string SolvePart2(string input)
-    {
-      List<string> initialStackLines = new();
-      IList<Stack<char>> stacks = null;
+      // Part 2
+
+      initialStackLines = new();
+      stacks = null;
 
       foreach (string line in input.Split(Environment.NewLine))
       {
@@ -78,12 +80,12 @@ namespace aoc22.Puzzles.Day05
         throw new ArgumentException("Invalid input format. Initialization not clearly distinguished from commands by an empty line!");
       }
 
-      StringBuilder sb = new();
+      sb = new();
       foreach (Stack<char> stack in stacks)
       {
         sb.Append(stack.Peek());
       }
-      return $"The top crates on all stacks in order are: {sb}";
+      Console.WriteLine($"The top crates on all stacks in order are: {sb}");
     }
 
     private static IList<Stack<char>> ParseInitialStacks(List<string> stackLines)

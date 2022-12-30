@@ -17,7 +17,7 @@ namespace aoc22.Puzzles.Day15
 
     public string PuzzleName => "Day 15: Beacon Exclusion Zone";
 
-    public string InputFileName => @"Puzzles\Day15\Day15Input.txt";
+    public string InputFileName => @"Input.txt";
 
     public void Run(string input)
     {

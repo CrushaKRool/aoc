@@ -8,7 +8,7 @@ namespace aoc22.Puzzles.Day02
   {
     public string PuzzleName => "Day 2: Rock Paper Scissors";
 
-    public string InputFileName => @"Puzzles\Day02\Day02Input.txt";
+    public string InputFileName => @"Input.txt";
 
     private const int ScoreLoss = 0;
     private const int ScoreDraw = 3;

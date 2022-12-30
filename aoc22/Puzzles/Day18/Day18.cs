@@ -12,7 +12,7 @@ namespace aoc22.Puzzles.Day18
   {
     public string PuzzleName => "Day 18: Boiling Boulders";
 
-    public string InputFileName => @"Puzzles\Day18\Day18Input.txt";
+    public string InputFileName => @"Input.txt";
 
     /// <summary>
     /// Maximum width, height and length of the 3D grid. Estimated by looking at the input coordinates.

@@ -24,7 +24,7 @@ namespace aoc22.Puzzles.Day14
 
     public string PuzzleName => "Day 14: Regolith Reservoir";
 
-    public string InputFileName => @"Puzzles\Day14\Day14Input.txt";
+    public string InputFileName => @"Input.txt";
 
     public void Run(string input)
     {

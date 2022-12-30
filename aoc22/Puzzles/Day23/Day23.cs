@@ -12,7 +12,7 @@ namespace aoc22.Puzzles.Day23
   {
     public string PuzzleName => "Day 23: Unstable Diffusion";
 
-    public string InputFileName => @"Puzzles\Day23\Day23Input.txt";
+    public string InputFileName => @"Input.txt";
 
     public void Run(string input)
     {

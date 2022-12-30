@@ -1,7 +1,6 @@
 ﻿using aoc_common;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace aoc22.Puzzles.Day21
@@ -10,7 +9,7 @@ namespace aoc22.Puzzles.Day21
   {
     public string PuzzleName => "Day 21: Monkey Math";
 
-    public string InputFileName => @"Puzzles\Day21\Day21Input.txt";
+    public string InputFileName => @"Input.txt";
 
     public void Run(string input)
     {

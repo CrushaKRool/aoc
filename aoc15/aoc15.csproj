@@ -13,10 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Puzzles\Day01\Day01Input.txt">
+    <Content Include="Puzzles\Day01\Data\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Puzzles\Day02\Day02Input.txt">
+    <Content Include="Puzzles\Day02\Data\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -10,7 +10,7 @@ namespace aoc22.Puzzles.Day17
   {
     public string PuzzleName => "Day 17: Pyroclastic Flow";
 
-    public string InputFileName => @"Puzzles\Day17\Day17Input.txt";
+    public string InputFileName => @"Input.txt";
 
     /// <summary>
     /// Shape definitions of all the rock parts, in the order they fall.

@@ -4,9 +4,9 @@ namespace aoc15.Puzzles.Day02
 {
   public class Day02 : IPuzzle
   {
-    public string InputFileName => @"Puzzles\Day02\Day02Input.txt";
-
     public string PuzzleName => "Day 2: I Was Told There Would Be No Math";
+
+    public string InputFileName => @"Puzzles\Day02\Input.txt";
 
     public void Run(string input)
     {

@@ -9,7 +9,7 @@ namespace aoc22.Puzzles.Day01
   {
     public string PuzzleName => "Day 1: Calorie Counting";
 
-    public string InputFileName => @"Puzzles\Day01\Day01Input.txt";
+    public string InputFileName => @"Input.txt";
 
     public void Run(string input)
     {

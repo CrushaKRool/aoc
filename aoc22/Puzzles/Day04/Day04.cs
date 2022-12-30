@@ -11,7 +11,7 @@ namespace aoc22.Puzzles.Day04
 
     public string PuzzleName => "Day 4: Camp Cleanup";
 
-    public string InputFileName => @"Puzzles\Day04\Day04Input.txt";
+    public string InputFileName => @"Input.txt";
 
     public void Run(string input)
     {

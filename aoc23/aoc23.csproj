@@ -8,12 +8,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Puzzles\Day02\Data\Input.txt" />
+    <None Remove="Puzzles\Day02\Data\Test.txt" />
     <None Remove="Puzzles\Day01\Data\Input.txt" />
     <None Remove="Puzzles\Day01\Data\Test.txt" />
     <None Remove="Puzzles\Day01\Data\Test2.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Puzzles\Day02\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day02\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Puzzles\Day01\Data\Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

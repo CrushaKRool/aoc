@@ -1,9 +1,8 @@
 ﻿using aoc_common;
-using System.Text.RegularExpressions;
 
 namespace aoc23.Puzzles.Day02
 {
-  public partial class Day02 : IPuzzle
+  public class Day02 : IPuzzle
   {
     public string PuzzleName => "Day 02: Cube Conundrum";
 

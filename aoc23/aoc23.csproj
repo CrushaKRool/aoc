@@ -13,6 +13,52 @@
     <None Remove="Puzzles\Day01\Data\Input.txt" />
     <None Remove="Puzzles\Day01\Data\Test.txt" />
     <None Remove="Puzzles\Day01\Data\Test2.txt" />
+    <None Remove="Puzzles\Day03 - Copy (10)\Data\Input.txt" />
+    <None Remove="Puzzles\Day03 - Copy (10)\Data\Test.txt" />
+    <None Remove="Puzzles\Day03 - Copy (2)\Data\Input.txt" />
+    <None Remove="Puzzles\Day03 - Copy (2)\Data\Test.txt" />
+    <None Remove="Puzzles\Day03 - Copy (3)\Data\Input.txt" />
+    <None Remove="Puzzles\Day03 - Copy (3)\Data\Test.txt" />
+    <None Remove="Puzzles\Day03 - Copy (4)\Data\Input.txt" />
+    <None Remove="Puzzles\Day03 - Copy (4)\Data\Test.txt" />
+    <None Remove="Puzzles\Day03 - Copy (5)\Data\Input.txt" />
+    <None Remove="Puzzles\Day03 - Copy (5)\Data\Test.txt" />
+    <None Remove="Puzzles\Day03 - Copy (6)\Data\Input.txt" />
+    <None Remove="Puzzles\Day03 - Copy (6)\Data\Test.txt" />
+    <None Remove="Puzzles\Day03 - Copy (7)\Data\Input.txt" />
+    <None Remove="Puzzles\Day03 - Copy (7)\Data\Test.txt" />
+    <None Remove="Puzzles\Day03 - Copy (8)\Data\Input.txt" />
+    <None Remove="Puzzles\Day03 - Copy (8)\Data\Test.txt" />
+    <None Remove="Puzzles\Day03 - Copy (9)\Data\Input.txt" />
+    <None Remove="Puzzles\Day03 - Copy (9)\Data\Test.txt" />
+    <None Remove="Puzzles\Day04\Data\Input.txt" />
+    <None Remove="Puzzles\Day04\Data\Test.txt" />
+    <None Remove="Puzzles\Day03\Data\Input.txt" />
+    <None Remove="Puzzles\Day03\Data\Test.txt" />
+    <None Remove="Puzzles\Day13 - Copy (10)\Data\Input.txt" />
+    <None Remove="Puzzles\Day13 - Copy (10)\Data\Test.txt" />
+    <None Remove="Puzzles\Day13 - Copy (11)\Data\Input.txt" />
+    <None Remove="Puzzles\Day13 - Copy (11)\Data\Test.txt" />
+    <None Remove="Puzzles\Day13 - Copy (12)\Data\Input.txt" />
+    <None Remove="Puzzles\Day13 - Copy (12)\Data\Test.txt" />
+    <None Remove="Puzzles\Day13 - Copy (13)\Data\Input.txt" />
+    <None Remove="Puzzles\Day13 - Copy (13)\Data\Test.txt" />
+    <None Remove="Puzzles\Day13 - Copy (2)\Data\Input.txt" />
+    <None Remove="Puzzles\Day13 - Copy (2)\Data\Test.txt" />
+    <None Remove="Puzzles\Day13 - Copy (3)\Data\Input.txt" />
+    <None Remove="Puzzles\Day13 - Copy (3)\Data\Test.txt" />
+    <None Remove="Puzzles\Day13 - Copy (4)\Data\Input.txt" />
+    <None Remove="Puzzles\Day13 - Copy (4)\Data\Test.txt" />
+    <None Remove="Puzzles\Day13 - Copy (5)\Data\Input.txt" />
+    <None Remove="Puzzles\Day13 - Copy (5)\Data\Test.txt" />
+    <None Remove="Puzzles\Day13 - Copy (6)\Data\Input.txt" />
+    <None Remove="Puzzles\Day13 - Copy (6)\Data\Test.txt" />
+    <None Remove="Puzzles\Day13 - Copy (7)\Data\Input.txt" />
+    <None Remove="Puzzles\Day13 - Copy (7)\Data\Test.txt" />
+    <None Remove="Puzzles\Day13 - Copy (8)\Data\Input.txt" />
+    <None Remove="Puzzles\Day13 - Copy (8)\Data\Test.txt" />
+    <None Remove="Puzzles\Day14\Data\Input.txt" />
+    <None Remove="Puzzles\Day14\Data\Test.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +75,144 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Puzzles\Day01\Data\Test2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day16\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day16\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day15\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day15\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day17\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day17\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day18\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day18\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day19\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day19\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day20\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day20\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day21\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day21\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day22\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day22\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day23\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day23\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day24\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day24\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day25\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day25\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day14\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day14\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day13\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day13\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day12\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day12\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day11\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day11\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day10\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day10\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day09\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day09\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day08\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day08\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day07\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day07\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day06\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day06\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day05\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day05\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day04\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day04\Data\Test.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day03\Data\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day03\Data\Test.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

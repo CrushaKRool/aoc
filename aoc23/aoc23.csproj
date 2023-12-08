@@ -35,6 +35,7 @@
     <None Remove="Puzzles\Day04\Data\Test.txt" />
     <None Remove="Puzzles\Day03\Data\Input.txt" />
     <None Remove="Puzzles\Day03\Data\Test.txt" />
+    <None Remove="Puzzles\Day08\Data\Test2.txt" />
     <None Remove="Puzzles\Day13 - Copy (10)\Data\Input.txt" />
     <None Remove="Puzzles\Day13 - Copy (10)\Data\Test.txt" />
     <None Remove="Puzzles\Day13 - Copy (11)\Data\Input.txt" />
@@ -75,6 +76,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Puzzles\Day01\Data\Test2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Puzzles\Day08\Data\Test2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Puzzles\Day16\Data\Input.txt">

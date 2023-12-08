@@ -1,4 +1,6 @@
-﻿namespace aoc23.Puzzles.Day05
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace aoc23.Puzzles.Day05
 {
   internal class Mapping(string name)
   {

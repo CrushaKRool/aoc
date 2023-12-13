@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
+using System.Text.RegularExpressions;
 
 namespace aoc23.Puzzles.Day12
 {
@@ -11,11 +8,46 @@ namespace aoc23.Puzzles.Day12
     public string Condition { get; set; }
     public int[] DamagedGroups { get; set; }
 
+    private Regex WildcardMatchRegex { get; set; }
+    private Regex FullMatchRegex { get; set; }
+
     public ConditionRecord(string inputLine)
     {
       string[] parts = inputLine.Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
       Condition = parts[0];
       DamagedGroups = parts[1].Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries).Select(int.Parse).ToArray();
+      InitRegex(DamagedGroups);
+    }
+
+    private void InitRegex(int[] damagedGroups)
+    {
+      // Wildcard Regex
+      StringBuilder sb = new();
+      sb.Append(@"^[.?]*");
+      for (int i = 0; i < damagedGroups.Length; i++)
+      {
+        sb.Append(@"[#?]{" + damagedGroups[i] +"}");
+        if (i < damagedGroups.Length - 1)
+        {
+          sb.Append(@"[.?]+");
+        }
+      }
+      sb.Append(@"[.?]*$");
+      WildcardMatchRegex = new Regex(sb.ToString());
+
+      // Full Match Regex
+      sb = new();
+      sb.Append(@"^[.]*");
+      for (int i = 0; i < damagedGroups.Length; i++)
+      {
+        sb.Append(@"[#]{" + damagedGroups[i] + "}");
+        if (i < damagedGroups.Length - 1)
+        {
+          sb.Append(@"[.]+");
+        }
+      }
+      sb.Append(@"[.]*$");
+      FullMatchRegex = new Regex(sb.ToString());
     }
 
     public void Unfold()
@@ -29,6 +61,7 @@ namespace aoc23.Puzzles.Day12
       newGroups.AddRange(DamagedGroups);
       newGroups.AddRange(DamagedGroups);
       DamagedGroups = [.. newGroups];
+      InitRegex(DamagedGroups);
     }
 
     public IEnumerable<string> GetPermutationsOfCondition()
@@ -38,6 +71,11 @@ namespace aoc23.Puzzles.Day12
 
     private IEnumerable<string> TryPermutateCondition(string condition)
     {
+      if (!WildcardMatchRegex.IsMatch(condition))
+      {
+        yield break;
+      }
+
       int wildcardIndex = condition.IndexOf('?');
       if (wildcardIndex == -1)
       {
@@ -62,31 +100,7 @@ namespace aoc23.Puzzles.Day12
 
     public bool ConditionMatchesDamagedGroups(string condition)
     {
-      List<int> groups = [];
-      bool curIsDamaged = condition[0] == '#';
-      int curDamagedStreak = curIsDamaged ? 1 : 0;
-      for (int i = 1; i < condition.Length; i++)
-      {
-        bool newIsDamaged = condition[i] == '#';
-        if (newIsDamaged)
-        {
-          curDamagedStreak++;
-        }
-        else
-        {
-          if (curIsDamaged && curDamagedStreak > 0)
-          {
-            groups.Add(curDamagedStreak);
-            curDamagedStreak = 0;
-          }
-        }
-        curIsDamaged = newIsDamaged;
-      }
-      if (curDamagedStreak > 0)
-      {
-        groups.Add(curDamagedStreak);
-      }
-      return groups.SequenceEqual(DamagedGroups);
+      return FullMatchRegex.IsMatch(condition);
     }
   }
 }

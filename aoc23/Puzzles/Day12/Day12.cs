@@ -25,13 +25,13 @@ namespace aoc23.Puzzles.Day12
         records.Add(new(inputLine));
       }
 
-      int sumOfArrangements = records.AsParallel().Sum(GetArrangementCount);
+      int sumOfArrangements = records.Sum(GetArrangementCount);
       Console.WriteLine($"Sum of arrangements: {sumOfArrangements}");
     }
 
     private static void Part2(string input)
     {
-      Console.WriteLine("Part 1:");
+      Console.WriteLine("Part 2:");
       List<ConditionRecord> records = [];
       foreach (var inputLine in input.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries))
       {
@@ -47,7 +47,7 @@ namespace aoc23.Puzzles.Day12
     private static int GetArrangementCount(ConditionRecord rec)
     {
       int arrangements = rec.GetPermutationsOfCondition().Count(perm => rec.ConditionMatchesDamagedGroups(perm));
-      Console.WriteLine($"{rec.Condition} has {arrangements} arrangements");
+      Console.WriteLine($"{rec.Condition} - {string.Join(",", rec.DamagedGroups)} has {arrangements} arrangements");
       return arrangements;
     }
   }

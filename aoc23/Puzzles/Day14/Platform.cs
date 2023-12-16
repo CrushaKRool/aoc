@@ -1,26 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Channels;
-using System.Threading.Tasks;
+﻿using aoc_common;
 
 namespace aoc23.Puzzles.Day14
 {
-  internal class Platform
+  internal class Platform(string input) : Grid(input)
   {
-    public char[][] Data { get; }
-    private int XMax { get; }
-    private int YMax { get; }
-
-    public Platform(string input)
-    {
-      string[] lines = input.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
-      Data = lines.Select(s => s.ToArray()).ToArray();
-      XMax = lines[0].Length;
-      YMax = lines.Length;
-    }
-
     public void TiltNorth()
     {
       bool changed;
@@ -192,18 +175,6 @@ namespace aoc23.Puzzles.Day14
         }
       }
       return load;
-    }
-
-    public void Print()
-    {
-      for (int y = 0; y < YMax; y++)
-      {
-        for (int x = 0; x < XMax; x++)
-        {
-          Console.Write(Data[y][x]);
-        }
-        Console.WriteLine();
-      }
     }
   }
 }

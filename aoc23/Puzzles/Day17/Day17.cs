@@ -4,7 +4,7 @@ namespace aoc23.Puzzles.Day17
 {
   public class Day17 : IPuzzle
   {
-    public string PuzzleName => throw new NotImplementedException();
+    public string PuzzleName => "Day 17: Clumsy Crucible";
 
     public string InputFileName => @"Test.txt";
 
